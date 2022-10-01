@@ -39,6 +39,7 @@
     }
   },
   "include": [
-    "./config/jest/jest-setup.ts"
+    "./config/jest/jest-setup.ts",
+    "./src/**/*.{ts,tsx}"
   ]
 }
