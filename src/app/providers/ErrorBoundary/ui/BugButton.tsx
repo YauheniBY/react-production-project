@@ -1,21 +1,20 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
-import { isError } from 'util';
 import { useTranslation } from 'react-i18next';
 
+// Компонент для тестирования ErrorBoundary
 export const BugButton = () => {
-    const [isEerror, setIsError] = useState(false);
-    const onThrow = () => {
-        setIsError(true);
-    };
+    const [error, setError] = useState(false);
     const { t } = useTranslation();
 
+    const onThrow = () => setError(true);
+
     useEffect(() => {
-        if (isEerror) {
+        if (error) {
             throw new Error();
         }
-    }, [isEerror]);
+    }, [error]);
+
     return (
         <Button
             onClick={onThrow}
