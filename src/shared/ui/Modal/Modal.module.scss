@@ -33,11 +33,19 @@
 
 .opened {
     pointer-events: auto;
-    opacity: 1;
+    opacity: 0;
     z-index: var(--modal-z-index);
 
     .content {
+        transform: scale(0.2);
+    }
+}
+
+.isOpening {
+    opacity: 1;
+    .content {
         transform: scale(1);
+        transition: 0.2s transform;
     }
 }
 
