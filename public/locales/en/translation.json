@@ -3,15 +3,17 @@
   "Перевод": "Translate",
   "Главная страница": "Main page",
   "Язык": "English",
-  "новый перевод": "новый перевод",
+  "новый перевод": "new translation",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "Reload page",
   "throw error": "throw error",
   "Главная": "Main",
   "О сайте": "About us",
-  "Переключить": "Переключить",
+  "Форма авторизации": "Auth form",
+  "Переключить": "Change",
   "Короткий язык": "En",
-  "Введите Username": "Введите Username",
-  "Введите Пароль": "Введите Пароль"
+  "Введите Username": "Enter Username",
+  "Введите Пароль": "Enter Password",
+  "Войти": "login"
 }
