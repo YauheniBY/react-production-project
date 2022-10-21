@@ -15,5 +15,14 @@
       "password": "123"
     }
   ],
-  "profiles": { "name": "typicode" }
+  "profiles": {
+    "first": "Евгений",
+    "lastname": "Лукьяненко",
+    "age": 37,
+    "currency": "BYN",
+    "country": "Belarus",
+    "city": "Gomel",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  }
 }
