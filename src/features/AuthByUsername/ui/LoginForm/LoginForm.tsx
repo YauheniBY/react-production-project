@@ -2,10 +2,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { useSelector, useStore } from 'react-redux';
-import { memo, useCallback, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { ReduxStoreWithManager } from 'app/providers/StoreProvider/config/StateSchema';
 import {
     DynamicModuleLoader,
     ReducerList,
@@ -15,12 +14,8 @@ import { loginByUserName } from '../../model/servises/loginByUserName';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
-import {
-    getLoginPassword,
-} from '../../model/selectors/getLoginPassword/getLoginPassword';
-import {
-    getLoginIsLoading,
-} from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
+import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 
 export interface LoginFormProps {

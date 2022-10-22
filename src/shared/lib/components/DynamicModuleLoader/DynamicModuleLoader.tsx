@@ -1,14 +1,11 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { useDispatch, useStore } from 'react-redux';
 import {
     ReduxStoreWithManager,
     StateSchemaKey,
 } from 'app/providers/StoreProvider/config/StateSchema';
 import { Reducer } from '@reduxjs/toolkit';
-import cls from './DynamicModuleLoader.module.scss';
 
 export type ReducerList = {
     [reducerName in StateSchemaKey]?: Reducer;
@@ -31,16 +28,16 @@ export const DynamicModuleLoader:FC<DynamicModuleLoaderProps> = (props) => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        Object.entries(reducers).forEach(([reducerName, reducer]: ReducerListEntry) => {
-            store.reducerManager.add(reducerName, reducer);
+        Object.entries(reducers).forEach(([reducerName, reducer]) => {
+            store.reducerManager.add(reducerName as StateSchemaKey, reducer);
             dispatch({ type: `@INIT ${reducerName} Reducer` });
         });
 
         return () => {
             if (removeAfterUnmount) {
                 Object.entries(reducers)
-                    .forEach(([reducerName, reducer]: ReducerListEntry) => {
-                        store.reducerManager.remove(reducerName);
+                    .forEach(([reducerName, reducer]) => {
+                        store.reducerManager.remove(reducerName as StateSchemaKey);
                         dispatch({ type: `@DESTROY ${reducerName} Reducer` });
                     });
             }

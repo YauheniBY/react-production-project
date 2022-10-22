@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
-    lazy,
+    lazy, MutableRefObject,
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -30,13 +30,13 @@ export const Modal = (props:ModalProps) => {
     const [isClosing, setIsClosing] = useState(false);
     const [isOpening, setIsOpening] = useState(false);
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isOpening]: isOpening,
         [cls.isClosing]: isClosing,
     };
 
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
+    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
     const closeHandler = useCallback(() => {
         if (onClose) {
