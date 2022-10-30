@@ -11,7 +11,7 @@ const MainPage = memo(() => {
     };
 
     return (
-        <div>
+        <div style={{ color: 'blue' }}>
             {t('Главная страница')}
         </div>
     );
