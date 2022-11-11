@@ -10,11 +10,11 @@ import {
     ReducerList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useDispatch, useSelector } from 'react-redux';
+import { AddCommentForm } from 'features/addCommentForm';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/servises/fetchCommentsByArticleId';
-import { AddCommentForm } from 'features/addCommentForm';
+} from '../../model/servises/fetchCommentsByArticleId';
 import {
     articleDetailsCommentsReducer,
     getArticleComments,
