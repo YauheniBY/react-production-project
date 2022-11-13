@@ -1,5 +1,4 @@
-import { ArticleView } from 'entities/Article/model/types/article';
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
+export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
 
 export { getArticleDetailsData } from './model/selectors/articleDetails';
 
