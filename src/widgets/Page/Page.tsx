@@ -27,14 +27,6 @@ export const Page = memo((props: PageProps) => {
     const scrollPosition = useSelector(
         (state: StateSchema) => getUIScrollByPath(state, pathname),
     );
-
-    const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-        dispatch(uiActions.setScrollPosition({
-            position: e.currentTarget.scrollTop,
-            path: pathname,
-        }));
-    }, 500);
-
     useInfiniteScroll({
         triggerRef,
         wrapperRef,
@@ -44,6 +36,13 @@ export const Page = memo((props: PageProps) => {
     useInitialEffect(() => {
         wrapperRef.current.scrollTop = scrollPosition;
     });
+
+    const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
+        dispatch(uiActions.setScrollPosition({
+            position: e.currentTarget.scrollTop,
+            path: pathname,
+        }));
+    }, 500);
 
     return (
         <section
