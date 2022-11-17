@@ -14,6 +14,7 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 import {
     fetchCommentsByArticleId,
 } from '../../model/servises/fetchCommentsByArticleId';
@@ -54,7 +55,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div
+            <Page
                 className={classNames(cls.ArticleDetailsPage, {}, [className])}
             >
                 <Button
@@ -65,19 +66,19 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 </Button>
                 {t('Статья не найдена')}
                 ;
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Button
-                onClick={onBackToList}
-                theme={ButtonTheme.OUTLINE}
-            >
-                {t('Назад к списку статей')}
-            </Button>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                <Button
+                    onClick={onBackToList}
+                    theme={ButtonTheme.OUTLINE}
+                >
+                    {t('Назад к списку статей')}
+                </Button>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментариии')} />
                 <AddCommentForm
@@ -87,7 +88,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

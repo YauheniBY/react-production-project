@@ -1,0 +1,15 @@
+.Page {
+    flex-grow: 1;
+    padding: 50px;
+    overflow-y: auto;
+    height: calc(100vh - var(--navbar-height));
+    width: calc(100% - var(--sidebar-width));
+}
+
+.triggerRef {
+    width: 1px;
+    height: 1px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    opacity: 0.1;
+}
