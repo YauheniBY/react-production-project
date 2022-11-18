@@ -1,4 +1,5 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { ArticleSortField } from 'entities/Article';
 import { initArticlesPage } from '../initArticlesPage/initArticlesPage';
 import { fetchArticlesList } from '../../services/fetchArticlesList/fetchArticlesList';
 
@@ -14,11 +15,21 @@ describe('initArticlesPage.test', () => {
                 limit: 5,
                 hasMore: true,
                 _inited: false,
+                search: '',
+                order: 'asc',
+                sort: ArticleSortField.TITLE,
             },
         });
-        await thunk.callThunk();
+        const urlParam: URLSearchParams = new URLSearchParams('?sort=createdAt&order=asc&search=abs');
+
+        await thunk.callThunk(urlParam);
         expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toBeCalledWith({ page: 1 });
+        expect(fetchArticlesList).toBeCalledWith({
+            search: 'abs',
+            order: 'asc',
+            sort: ArticleSortField.CREATED,
+            page: 1,
+        });
     });
     test('not init because inited already', async () => {
         const thunk = new TestAsyncThunk(initArticlesPage, {
@@ -29,9 +40,13 @@ describe('initArticlesPage.test', () => {
                 limit: 5,
                 hasMore: true,
                 _inited: true,
+                search: '',
+                order: 'asc',
+                sort: ArticleSortField.TITLE,
             },
         });
-        await thunk.callThunk();
+        const urlParam: URLSearchParams = new URLSearchParams('');
+        await thunk.callThunk(urlParam);
         expect(thunk.dispatch).toBeCalledTimes(2);
         expect(fetchArticlesList).not.toHaveBeenCalled();
     });

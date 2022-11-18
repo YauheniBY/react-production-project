@@ -27,8 +27,8 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 2022,
+      "createdAt": "16.02.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -99,8 +99,8 @@
       "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://miro.medium.com/max/825/1*JsOUSnX3NMaY5Y3C3DsQNg.jpeg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1012,
+      "createdAt": "06.02.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -171,8 +171,8 @@
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://denidenx.com/wp-content/uploads/2021/04/ide-dlya-pitona.jpeg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1042,
+      "createdAt": "12.03.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -240,14 +240,14 @@
     },
     {
       "id": "4",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Economics news1",
+      "subtitle": "Что нового в экономике за 2022 год?",
+      "img": "https://rus-bel.online/wp-content/uploads/2022/04/mvf-1.jpg",
+      "views": 522,
+      "createdAt": "21.01.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -264,14 +264,14 @@
     },
     {
       "id": "5",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Biology news",
+      "subtitle": "Что нового в Biology за 2022 год?",
+      "img": "https://www.sostav.ru/articles/rus/2010/03.12/news/images/1agrotest3.jpg",
+      "views": 5022,
+      "createdAt": "23.01.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -289,9 +289,9 @@
     {
       "id": "6",
       "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
+      "subtitle": "Что нового в Python за 2022 год?",
+      "img": "https://office-guru.ru/wp-content/uploads/2021/08/original-1e3a9b0322e85ba64376e6de6a9a0065.jpg",
+      "views": 82,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -312,11 +312,11 @@
     },
     {
       "id": "7",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
+      "title": "Kotlin September 2023 news",
+      "subtitle": "Что нового в Kotlin за сентябрь 2023 год?",
       "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 33,
+      "createdAt": "26.01.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -336,11 +336,11 @@
     },
     {
       "id": "8",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Python 2023 news",
+      "subtitle": "Что нового в Python за 2023 год?",
+      "img": "https://blog.hyperiondev.com/wp-content/uploads/2019/01/Blog-Python-Uses.jpg",
+      "views": 38,
+      "createdAt": "26.04.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -360,11 +360,11 @@
     },
     {
       "id": "9",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Kotlin 2022 JUNE news",
+      "subtitle": "Что нового в Kotlin за ИЮНЬ 2022 год?",
+      "img": "https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/225667580_109692301408970_4252102323266424748_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=tnyVbgIDFgwAX9oP8En&_nc_oc=AQmsthZNsyydDwmn1BucxJ9u9ukvxyxM0AN2t6L2Hz8TKFPZt_t1pMUU_OGg9nj_Tgs&_nc_ht=scontent-fra5-2.xx&oh=00_AfAeDgC6LCBCQgpoW12gKMXsGg1Zme01KnOdW4bBsiM9Uw&oe=637CCAE4",
+      "views": 152,
+      "createdAt": "29.06.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -384,11 +384,11 @@
     },
     {
       "id": "10",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Python JUlY news",
+      "subtitle": "Что нового в Python за ИЮЛЬ 2022 год?",
+      "img": "https://mvblog.ru/wp-content/uploads/2021/12/zachem-zdes-nuzhen-python.png",
+      "views": 3022,
+      "createdAt": "30.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -408,14 +408,15 @@
     },
     {
       "id": "11",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Mathematica news",
+      "subtitle": "Что нового в Математике за 2022 год?",
+      "img": "https://2022-god.com/wp-content/uploads/2021/08/ocenivanie-ogeh-i-egeh-po-matematike-v-2022-godu-3.jpg",
+      "views": 2222,
+      "createdAt": "27.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -432,11 +433,11 @@
     },
     {
       "id": "12",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Typescript 2021 news",
+      "subtitle": "Что нового в Typescript за 2021 год?",
+      "img": "https://i.ytimg.com/vi/2G8MIaqREn4/maxresdefault.jpg",
+      "views": 887,
+      "createdAt": "26.04.2021",
       "userId": "1",
       "type": [
         "IT"
@@ -456,11 +457,11 @@
     },
     {
       "id": "13",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Css news",
+      "subtitle": "Что нового в CSS за 2022 год?",
+      "img": "https://luxe-host.ru/wp-content/uploads/7/5/8/75873b1cf3dda123a905800ca06cb2a5.png",
+      "views": 554,
+      "createdAt": "26.09.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -480,11 +481,11 @@
     },
     {
       "id": "14",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "HTML news",
+      "subtitle": "Что нового в HTML за 2022 год?",
+      "img": "https://colorlib.com/wp/wp-content/uploads/sites/2/free-html5-frameworks.png",
+      "views": 334,
+      "createdAt": "26.11.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -504,11 +505,11 @@
     },
     {
       "id": "15",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "PHP news",
+      "subtitle": "Что нового в PHP за 2022 год?",
+      "img": "https://www.webtekno.com/images/editor/default/0001/45/c2e0b7dc1d3cf3d17ce3d17a015dd4d04eff0ac6.jpeg",
+      "views": 232,
+      "createdAt": "25.11.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -528,14 +529,14 @@
     },
     {
       "id": "16",
-      "title": "Python news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Bitcoin news",
+      "subtitle": "Что нового в Bitcoin за 2022 год?",
+      "img": "https://backend.tomsk.ru/api/v1/news-image/1467945.jpg",
+      "views": 3,
+      "createdAt": "27.11.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -552,14 +553,14 @@
     },
     {
       "id": "17",
-      "title": "Kotlin news",
-      "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Inflation news",
+      "subtitle": "Какая будет в Инфляция в мире в 2023 году?",
+      "img": "https://rostraeconomica.nl/wp-content/uploads/2017/10/economics2.png",
+      "views": 22,
+      "createdAt": "29.12.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {

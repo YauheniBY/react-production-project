@@ -6,11 +6,7 @@
 }
 
 .SMALL {
-  display: flex;
-  flex-wrap: wrap;
-
-  .card {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
