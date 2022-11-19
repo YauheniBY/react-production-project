@@ -18,3 +18,24 @@ body {
     display: flex;
 }
 
+/* W3C standard
+   сейчас только для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    height: 8px;
+    width: 10px;
+}
+*::-webkit-scrollbar-track {
+    background: var(--card-bg);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+    border: 2px solid var(--primary-color);
+}
+

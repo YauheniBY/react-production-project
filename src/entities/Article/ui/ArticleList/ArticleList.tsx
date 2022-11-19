@@ -1,41 +1,43 @@
-import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-
+import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { Text, TextSize } from 'shared/ui/Text/Text';
-import { Article, ArticleView } from '../../model/types/article';
-import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSceleton';
+import cls from './ArticleList.module.scss';
+import { Article, ArticleView } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string;
-    articles: Article[];
+    articles: Article[]
     isLoading?: boolean;
+    target?: HTMLAttributeAnchorTarget;
     view?: ArticleView;
 }
+
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+    .fill(0)
+    .map((item, index) => (
+        <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
+    ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
+        view = ArticleView.SMALL,
         isLoading,
-        view = ArticleView.BIG,
+        target,
     } = props;
     const { t } = useTranslation();
-    const getSkeletons = (view:ArticleView) => (
-        new Array((view === ArticleView.BIG) ? 3 : 9)
-            .fill(0)
-            .map((item, index) => (
-                <ArticleListItemSkeleton view={view} key={index} className={cls.card} />
-            ))
-    );
-    const renderArticle = (article:Article) => (
+
+    const renderArticle = (article: Article) => (
         <ArticleListItem
-            view={view}
             article={article}
+            view={view}
             className={cls.card}
             key={article.id}
+            target={target}
         />
     );
 

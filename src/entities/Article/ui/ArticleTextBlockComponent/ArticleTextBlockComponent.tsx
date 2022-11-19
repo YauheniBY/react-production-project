@@ -7,26 +7,21 @@ import { ArticleTextBlock } from '../../model/types/article';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
-    block: ArticleTextBlock
+    block: ArticleTextBlock;
 }
 
 export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentProps) => {
+    const { className, block } = props;
     const { t } = useTranslation();
-
-    const {
-        className,
-        block,
-    } = props;
 
     return (
         <div className={classNames(cls.ArticleTextBlockComponent, {}, [className])}>
-            {block.title
-                && <Text title={block.title} className={cls.title} />}
-
-            {block.paragraphs.map((paragraph) => (
+            {block.title && (
+                <Text title={block.title} className={cls.title} />
+            )}
+            {block.paragraphs.map((paragraph, index) => (
                 <Text key={paragraph} text={paragraph} className={cls.paragraph} />
             ))}
-
         </div>
     );
 });

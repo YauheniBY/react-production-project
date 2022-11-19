@@ -1,35 +1,26 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import {
-    DynamicModuleLoader,
-    ReducerList,
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useSelector } from 'react-redux';
+import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { memo, useCallback, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
+import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
-import {
-    ArticleCodeBlockComponent,
-} from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import {
-    ArticleTextBlockComponent,
-} from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
-import {
-    ArticleImageBlockComponent,
-} from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
+import cls from './ArticleDetails.module.scss';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
-import { articleDetailsReducer } from '../../model/slices/articleDetailsSlice';
-import cls from './ArticleDetails.module.scss';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 
 interface ArticleDetailsProps {
@@ -46,22 +37,14 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
-    const error = useSelector(getArticleDetailsError);
     const article = useSelector(getArticleDetailsData);
+    const error = useSelector(getArticleDetailsError);
 
     const renderBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
         case ArticleBlockType.CODE:
             return (
                 <ArticleCodeBlockComponent
-                    key={block.id}
-                    block={block}
-                    className={cls.block}
-                />
-            );
-        case ArticleBlockType.TEXT:
-            return (
-                <ArticleTextBlockComponent
                     key={block.id}
                     block={block}
                     className={cls.block}
@@ -75,6 +58,14 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     className={cls.block}
                 />
             );
+        case ArticleBlockType.TEXT:
+            return (
+                <ArticleTextBlockComponent
+                    key={block.id}
+                    className={cls.block}
+                    block={block}
+                />
+            );
         default:
             return null;
         }
@@ -85,7 +76,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             dispatch(fetchArticleById(id));
         }
     }, [dispatch, id]);
+
     let content;
+
     if (isLoading) {
         content = (
             <>
@@ -99,9 +92,8 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     } else if (error) {
         content = (
             <Text
-                className={cls.title}
-                title={t('Произошла ошибка загрузки  статьи')}
                 align={TextAlign.CENTER}
+                title={t('Произошла ошибка при загрузке статьи.')}
             />
         );
     } else {
@@ -109,12 +101,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             <>
                 <div className={cls.avatarWrapper}>
                     <Avatar
-                        className={cls.avatar}
-                        src={article?.img}
                         size={200}
+                        src={article?.img}
+                        className={cls.avatar}
                     />
                 </div>
-
                 <Text
                     className={cls.title}
                     title={article?.title}
@@ -122,11 +113,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     size={TextSize.L}
                 />
                 <div className={cls.articleInfo}>
-                    <Icon Svg={EyeIcon} className={cls.logo} />
+                    <Icon className={cls.icon} Svg={EyeIcon} />
                     <Text text={String(article?.views)} />
                 </div>
                 <div className={cls.articleInfo}>
-                    <Icon Svg={CalendarIcon} className={cls.logo} />
+                    <Icon className={cls.icon} Svg={CalendarIcon} />
                     <Text text={article?.createdAt} />
                 </div>
                 {article?.blocks.map(renderBlock)}

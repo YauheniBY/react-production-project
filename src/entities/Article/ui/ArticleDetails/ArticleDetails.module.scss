@@ -1,5 +1,5 @@
 .ArticleDetails {
-    min-width: 100%;
+    min-height: 100%;
 }
 
 .avatar {
@@ -19,14 +19,14 @@
     align-items: center;
 }
 
-.logo {
-    margin-left: 8px;
+.icon {
+    margin-right: 8px;
 }
 
 .avatarWrapper {
     display: flex;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
 }
 
 .block {

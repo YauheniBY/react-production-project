@@ -1,10 +1,11 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ArticleView, Article } from '../../model/types/article';
+
 import { ArticleListItem } from './ArticleListItem';
+import { Article, ArticleView } from '../../model/types/article';
 
 export default {
-    title: 'entities/ArticleListItem',
+    title: 'entities/Article/ArticleListItem',
     component: ArticleListItem,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -94,15 +95,13 @@ const article = {
 } as Article;
 
 export const Big = Template.bind({});
-
 Big.args = {
-    article,
     view: ArticleView.BIG,
+    article,
 };
 
 export const Small = Template.bind({});
-
 Small.args = {
-    article,
     view: ArticleView.SMALL,
+    article,
 };

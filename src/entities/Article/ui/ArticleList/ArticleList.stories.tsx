@@ -1,10 +1,11 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article, ArticleView } from 'entities/Article';
+
 import { ArticleList } from './ArticleList';
+import { Article, ArticleView } from '../../model/types/article';
 
 export default {
-    title: 'entities/ArticleList',
+    title: 'entities/Article/ArticleList',
     component: ArticleList,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -93,41 +94,40 @@ const article = {
     ],
 } as Article;
 
-export const isLoadingSmall = Template.bind({});
-
-isLoadingSmall.args = {
-    isLoading: true,
+export const LoadingBig = Template.bind({});
+LoadingBig.args = {
     articles: [],
+    isLoading: true,
+    view: ArticleView.BIG,
+};
+
+export const LoadingSmall = Template.bind({});
+LoadingSmall.args = {
+    articles: [],
+    isLoading: true,
     view: ArticleView.SMALL,
 };
-export const isLoadingBig = Template.bind({});
 
-isLoadingBig.args = {
-    isLoading: true,
-    articles: [],
-    view: ArticleView.BIG,
-};
-
-export const listBig = Template.bind({});
-
-listBig.args = {
-    articles: new Array(3)
-        .fill(0).map((item, index) => ({
-            ...article,
-            id: String(index),
-        })),
-    view: ArticleView.BIG,
-    isLoading: false,
-};
-
-export const listSmall = Template.bind({});
-
-listSmall.args = {
+export const ListSmall = Template.bind({});
+ListSmall.args = {
     articles: new Array(9)
-        .fill(0).map((item, index) => ({
+        .fill(0)
+        .map((item, index) => ({
             ...article,
             id: String(index),
         })),
-    view: ArticleView.SMALL,
     isLoading: false,
+    view: ArticleView.SMALL,
+};
+
+export const ListBig = Template.bind({});
+ListBig.args = {
+    articles: new Array(9)
+        .fill(0)
+        .map((item, index) => ({
+            ...article,
+            id: String(index),
+        })),
+    isLoading: false,
+    view: ArticleView.BIG,
 };
