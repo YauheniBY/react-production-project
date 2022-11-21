@@ -15,6 +15,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
+import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../model/slices';
 import {
     fetchArticleRecommendations,
@@ -50,10 +51,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const onSendComment = useCallback((text:string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
-    const navigate = useNavigate();
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
     const comments = useSelector(getArticleComments.selectAll);
     const recommendations = useSelector(getArticleRecommendations.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
@@ -68,12 +65,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             <Page
                 className={classNames(cls.ArticleDetailsPage, {}, [className])}
             >
-                <Button
-                    onClick={onBackToList}
-                    theme={ButtonTheme.OUTLINE}
-                >
-                    {t('Назад к списку статей')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 {t('Статья не найдена')}
                 ;
             </Page>
@@ -83,12 +75,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button
-                    onClick={onBackToList}
-                    theme={ButtonTheme.OUTLINE}
-                >
-                    {t('Назад к списку статей')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}
