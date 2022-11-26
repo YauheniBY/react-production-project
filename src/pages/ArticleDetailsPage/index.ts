@@ -1,5 +1,4 @@
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
+import { ArticleDetailsPageSchema } from './model/types';
 
 export {
     ArticleDetailsPageAsync as ArticleDetailsPage,

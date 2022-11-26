@@ -1,6 +1,6 @@
-import { ArticleDetailsSchema } from 'entities/Article';
-import { articleDetailsReducer } from 'entities/Article/model/slices/articleDetailsSlice';
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
+import { ArticleDetailsSchema } from '../../../Article';
+import { articleDetailsReducer } from './articleDetailsSlice';
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
 
 describe('articleDetailsSlice.test', () => {
     test('test  fetchArticleById fulfilled', () => {

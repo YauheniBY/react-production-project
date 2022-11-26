@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'yauheni-by-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -43,6 +44,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
+        'yauheni-by-plugin/path-checker': 'error',
         'i18next/no-literal-string': [
             'error',
             {
