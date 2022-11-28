@@ -4,7 +4,7 @@ import {
     Article, ArticleType, ArticleView, ArticleSortField,
 } from 'entities/Article';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/constants/localStorage';
-import { SortOrder } from 'shared/types/acticlesPageSchema';
+import { SortOrder } from 'shared/types';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 
