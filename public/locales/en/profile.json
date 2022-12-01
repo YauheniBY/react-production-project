@@ -11,5 +11,6 @@
   "Не указана страна": "incorrect or empty country",
   "Не верно введены имя и фамилия ": "incorrect firstname or lastname",
   "Не верно указан возраст": "incorrect age",
-  "Не укзаны данные для сохранения": "incorrect data"
+  "Не укзаны данные для сохранения": "incorrect data",
+  "Профиль не найден": "Профиль не найден"
 }

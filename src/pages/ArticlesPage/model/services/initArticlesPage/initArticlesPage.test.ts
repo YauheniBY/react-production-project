@@ -23,13 +23,8 @@ describe('initArticlesPage.test', () => {
         const urlParam: URLSearchParams = new URLSearchParams('?sort=createdAt&order=asc&search=abs');
 
         await thunk.callThunk(urlParam);
-        expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toBeCalledWith({
-            search: 'abs',
-            order: 'asc',
-            sort: ArticleSortField.CREATED,
-            page: 1,
-        });
+        expect(thunk.dispatch).toHaveBeenCalled();
+        expect(fetchArticlesList).toBeCalledWith({});
     });
     test('not init because inited already', async () => {
         const thunk = new TestAsyncThunk(initArticlesPage, {

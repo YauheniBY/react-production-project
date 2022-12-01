@@ -3,8 +3,8 @@ import { Country } from 'entities/Country';
 import {
     profileActions, profileReducer,
 } from '../../model/slice/profileSlice';
-import { ProfileSchema, ValidateProfileError } from '../types/profile';
 import { updateProfileData } from '../servises/updateProfileData/updateProfileData';
+import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema';
 
 const data = {
     first: 'admin',

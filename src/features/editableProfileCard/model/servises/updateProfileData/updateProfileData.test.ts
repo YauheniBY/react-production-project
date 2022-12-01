@@ -1,12 +1,8 @@
-import { StateSchema } from 'app/providers/StoreProvider';
-import axios from 'axios';
-import { Dispatch } from '@reduxjs/toolkit';
-import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import { ValidateProfileError } from '../../types/profile';
 import { updateProfileData } from './updateProfileData';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 
 const data = {
     first: 'admin',
