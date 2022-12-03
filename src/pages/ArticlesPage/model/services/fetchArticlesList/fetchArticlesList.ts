@@ -12,7 +12,7 @@ import {
 } from '../../selectors/articlesPageSelectors';
 
 interface fetchArticlesListProps {
-replace?: boolean;
+  replace?: boolean;
 }
 
 export const fetchArticlesList = createAsyncThunk<
