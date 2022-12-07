@@ -1,10 +1,11 @@
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { ValidateProfileError } from '../consts/consts';
 import {
     profileActions, profileReducer,
 } from '../../model/slice/profileSlice';
 import { updateProfileData } from '../servises/updateProfileData/updateProfileData';
-import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema';
+import { ProfileSchema } from '../types/editableProfileCardSchema';
 
 const data = {
     first: 'admin',

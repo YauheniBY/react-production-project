@@ -9,10 +9,11 @@ export {
     getUserInited,
 } from './model/selectors/getUserInited/getUserInited';
 
-export {
+export type {
     User,
     UserSchema,
 } from './model/types/user';
+
 export { getUserRoles, isUserAdmin, isUserManager } from './model/selectors/roleSelectors';
 
-export { UserRole } from './model/types/user';
+export { UserRole } from './model/consts/consts';
