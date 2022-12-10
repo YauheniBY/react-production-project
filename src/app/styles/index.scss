@@ -8,10 +8,15 @@ body {
     font: var(--font-m);
 }
 
+.app,
+.app_modal,
+.app_drawer {
+    color: var(--primary-color);
+    min-height: 100vh;
+}
+
 .app {
     background: var(--bg-color);
-    min-height: 100vh;
-    color: var(--primary-color);
 }
 
 .content-page {
