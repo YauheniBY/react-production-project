@@ -12,10 +12,11 @@ body {
 .app_modal,
 .app_drawer {
     color: var(--primary-color);
-    min-height: 100vh;
+    font: var(--font-m);
 }
 
 .app {
+    min-height: 100vh;
     background: var(--bg-color);
 }
 

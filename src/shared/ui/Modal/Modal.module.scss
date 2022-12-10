@@ -28,32 +28,34 @@
     border-radius: 12px;
     background-color: var(--bg-color);
     max-width: 60%;
-    transition: 0.3s transform;
-    transform: scale(0.5);
+}
+
+@keyframes modalRisen {
+    from {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .opened {
     pointer-events: auto;
-    opacity: 0;
+    opacity: 1;
     z-index: var(--modal-z-index);
 
     .content {
-        transform: scale(0.2);
-    }
-}
-
-.isOpening {
-    opacity: 1;
-
-    .content {
-        transform: scale(1);
-        transition: 0.2s transform;
+        animation: modalRisen 0.3s;
     }
 }
 
 .isClosing {
     .content {
         transform: scale(0.2);
+        opacity: 0.5;
         transition: 0.2s transform;
     }
 }
