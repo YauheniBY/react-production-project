@@ -1,8 +1,8 @@
-import { StateSchema } from 'app/providers/StoreProvider';
 import axios from 'axios';
 import { Dispatch } from '@reduxjs/toolkit';
-import { userActions } from 'entities/User';
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { userActions } from '@/entities/User';
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUserName } from './loginByUserName';
 
 // const userData = { username: 'someName', id: '123' };

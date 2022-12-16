@@ -1,10 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Page } from 'widgets/Page/Page';
-import { VStack } from 'shared/ui/Stack';
-import { EditableProfileCard } from 'features/editableProfileCard';
-import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
 import { useParams } from 'react-router-dom';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { Page } from '@/widgets/Page/Page';
+import { VStack } from '@/shared/ui/Stack';
+import { EditableProfileCard } from '@/features/editableProfileCard';
+import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
 
 interface ProfilePageProps {
     className?: string
