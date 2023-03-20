@@ -7359,10 +7359,10 @@
     "semver" "^6.3.0"
     "string.prototype.matchall" "^4.0.6"
 
-"eslint-plugin-yauheni-by-plugin@^0.0.3":
-  "integrity" "sha512-Hoohy7LJLbXswaQTvHDpk3BV98RKqHXfOXkFwkSr2Cnf5FTfCSGTdfouD0t/rEdopeBIm1/op4mhXq/cJCZBbA=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-yauheni-by-plugin/-/eslint-plugin-yauheni-by-plugin-0.0.3.tgz"
-  "version" "0.0.3"
+"eslint-plugin-yauheni-by-plugin@^0.0.4":
+  "integrity" "sha512-cfcEjOGEdIaposw84xj1lYiXoK7CBP1qBJxR8RnIxFlsHZwwaFTI/AO0H2mJNcJixzt6eS+dSPMgToz+teya+Q=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-yauheni-by-plugin/-/eslint-plugin-yauheni-by-plugin-0.0.4.tgz"
+  "version" "0.0.4"
   dependencies:
     "requireindex" "^1.2.0"
 
