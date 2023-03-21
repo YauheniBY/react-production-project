@@ -45,6 +45,13 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'yauheni-by-plugin/path-checker': ['error', { alias: '@' }],
+        'yauheni-by-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'yauheni-by-plugin/public-api-imports': [
             'error',
             {

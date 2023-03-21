@@ -3,12 +3,9 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { MainPage } from '@/pages/MainPage';
-import MainIcon from '@/shared/assets/icons/main-20-20.svg';
 import { getUserAuthData } from '@/entities/User';
 import { SidebarItemInterface } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
-import { RoutePath } from '@/shared/constants/router';
 
 interface SidebarItemProps {
     item: SidebarItemInterface,
