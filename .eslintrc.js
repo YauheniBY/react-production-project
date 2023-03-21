@@ -44,7 +44,14 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'yauheni-by-plugin/path-checker': ['error', { alias: '@' ],
+        'yauheni-by-plugin/path-checker': ['error', { alias: '@' }],
+        'yauheni-by-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
         'i18next/no-literal-string': [
             'error',
             {
