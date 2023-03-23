@@ -7366,10 +7366,10 @@
   dependencies:
     "eslint-rule-composer" "^0.3.0"
 
-"eslint-plugin-yauheni-by-plugin@^0.0.7":
-  "integrity" "sha512-Pe+brjjWJ/sIux2YcE8llKs/sug6rBh35uM2OgyhCtMCgD6FNrasjAWL13ffuXVwUEBjTY9U9kOo54dUMz+39A=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-yauheni-by-plugin/-/eslint-plugin-yauheni-by-plugin-0.0.7.tgz"
-  "version" "0.0.7"
+"eslint-plugin-yauheni-by-plugin@^0.0.8":
+  "integrity" "sha512-6O++9EIZSs+W+s0Dfqfiixk8IMb/sq0dZIjY0KN+dyusWBYDZA+Po+Q0LS6h79WWKd7Cw69J1gODudkaMoy5Nw=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-yauheni-by-plugin/-/eslint-plugin-yauheni-by-plugin-0.0.8.tgz"
+  "version" "0.0.8"
   dependencies:
     "micromatch" "^4.0.5"
     "requireindex" "^1.2.0"
