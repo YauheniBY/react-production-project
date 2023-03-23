@@ -1,5 +1,3 @@
-import { getArticleDetailsData } from './model/selectors/articleDetails';
-
 export {
     ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';

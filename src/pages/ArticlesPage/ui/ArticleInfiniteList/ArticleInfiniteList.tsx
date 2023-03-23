@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useSearchParams } from 'react-router-dom';
 import { ArticleList } from '@/entities/Article';
 import { Text } from '@/shared/ui/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
