@@ -29,7 +29,7 @@ describe('fetchNextArticlesPage.test', () => {
             articlesPage: {
                 page: 2,
                 entities: {},
-                isLoading: false,
+                isLoading: true,
                 ids: [],
                 limit: 5,
                 hasMore: false,
